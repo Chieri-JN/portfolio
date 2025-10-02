@@ -1,0 +1,156 @@
+body {
+    /* Set line height to 1.5 times the font size
+       and use the OS’s UI font as the website font
+     */
+    /* background : black; */
+    /* text: white; */
+    font: 100%/1.5 system-ui;
+    /*width: max-content;*/
+    max-width: 100ch;
+    margin-inline: max(1em, (100% - 100ch) / 2);
+}
+:root {
+    --color-accent: oklch(60% 0.15 250);
+    --color-main: oklch(95% 5% 287.974);
+    color-scheme: light dark
+}
+
+.color-scheme {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font: inherit;
+    z-index: 1;
+}
+
+.fit-picture {
+    width: 250px;
+}
+.photo {
+    width: 1000px;
+}
+
+/*.nav-bar  ol {*/
+/*    list-style-type: none;*/
+/*    padding-left: 0;*/
+/*    li {*/
+/*        display: contents;*/
+/*    };*/
+/*}*/
+
+.crumb{
+    display: inline-block;
+}
+.nav-bar {
+    display: flex;
+    margin-bottom: 0.5em;
+    color: inherit;
+    margin-inline: auto;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: oklch(80% 3% 200);
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    width: 100%;
+}
+
+.nav-bar li {
+    display: contents;
+    /* display: inline-block; */
+}
+
+.nav-bar a {
+    flex: 1;
+    padding: 0.5em;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+}
+
+.nav-bar a:hover {
+    border-bottom-width: 0.4em;
+    border-bottom-style: solid;
+    border-bottom-color: var(--color-accent);
+    /*background-color: oklch(from var(--color-accent) 95% 5% h);*/
+    background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+
+}
+
+.nav-bar a.current {
+    border-bottom-width: 0.4em;
+    border-bottom-style: solid;
+    border-bottom-color: oklch(0.763 0.129 287.974);
+    /*background-color: oklch(95% 5% 287.974);*/
+    /*background-color: color-mix(in oklch, oklch(95% 5% 287.974), canvas 85%);*/
+    background-color: color-mix(in oklch, var(--color-main), canvas 85%);
+    padding-bottom: 0.1em;
+
+}
+
+
+
+.nav-bar a::after {
+    display: inline-block;
+    color: black;
+    font-size: 80%;
+    font-weight: bold;
+    padding: 0 3px;
+  }
+
+.contactForm {
+    font: inherit;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1em;
+
+    label {
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-column: 1 / -1;
+    }
+    input, textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    button {
+        grid-column: 1 / -1;
+    }
+
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    /*grid-template-rows : subgrid; */
+    gap: 1em;
+    align-items: start;
+    grid-auto-rows: min-content;
+
+    article {
+        /*display: grid;  */
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row: span 3;
+    }
+    h2 {
+        margin: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.1;
+        text-wrap: balance;
+    }
+
+    h1 {
+        font-size: 400%;
+    }
+}
+
+.Title {
+    /* font : 100%/1 system-ui; */
+    
+}

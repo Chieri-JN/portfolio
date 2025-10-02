@@ -1,2 +1,12 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+
+<svelte:head>
+	<title>Home</title>
+</svelte:head>
+
+<h1 class = "Title">
+    Chieri Nnadozie
+</h1>
+<img class = "fit-picture"
+        src="/images/Chieri%20Nnadozie.jpg"
+alt="Photo of me"/>
+<p>Senior at CMU studying CS, HCI and Design</p>
